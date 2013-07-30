@@ -1,6 +1,6 @@
 #include "../include/attack.h"
 
-Attack::Attack(std::string name, double hpEffect):Action(name)// : Action::Action(std::string name, double effect)
+Attack::Attack(std::string name, double hpEffect):Action(name)
 {
     this->hpEffect = hpEffect;
 }
