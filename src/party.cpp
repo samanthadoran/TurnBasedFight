@@ -21,6 +21,12 @@ std::string Party::toString() const
     return ss.str();
 }
 
+Character * Party::get(unsigned int i)
+{
+    return members[i];
+}
+
+
 //Draws a simple menu and prompts the user to select a member.
 Character * Party::select()
 {
@@ -32,7 +38,7 @@ Character * Party::select()
     int selection = 0;
     do
     {
-        std::cout << "Please enter an integer [1, " << members.size() << "]."<<std::endl;
+        std::cout << "\nPlease enter an integer [1, " << members.size() << "]."<<std::endl;
         std::cin >> selection;
     }while((selection < 1 || (unsigned int)selection > members.size()) && selection != -1);
 
@@ -41,7 +47,7 @@ Character * Party::select()
     {
         std::cout << "Returning to previous menu..." << std::endl;
         std::cout << "\n\n\n" << std::endl;
-        return NULL;
+        return nullptr;
     }
 
     //Inform the user of their choice.

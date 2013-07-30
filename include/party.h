@@ -11,6 +11,7 @@ class Party
         Party();
         std::string toString() const;
         Character * select();
+        Character * get(unsigned int);
         void removeMember(Character *);
         unsigned int getSize() const;
         void insertMember(Character *);
